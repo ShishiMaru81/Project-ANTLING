@@ -1,0 +1,15 @@
+# Ultralytics: a *relative* `path` is often joined with a global `datasets/` folder and breaks.
+# Run training via `python src/train.py` — it generates `dataset/.ultralytics_data.yaml`
+# with an absolute `path` pointing at this `dataset/` directory.
+#
+# For manual `yolo train`, either use that generated file or set `path` to an absolute path
+# to this folder (forward slashes work on Windows), e.g. D:/your/repo/dataset
+
+path: dataset
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: human
+  1: car
